@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "50089851466",
+    "project_id": "fir-rcred",
+    "storage_bucket": "fir-rcred.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:50089851466:android:26fabd0b57b989236084b3",
+        "android_client_info": {
+          "package_name": "com.example.firebasecrud"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr05cyrKH6AfxJaFUr6ZN715BWaIFFMvg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
