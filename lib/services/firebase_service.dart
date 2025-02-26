@@ -38,8 +38,10 @@ class EmployeeServices {
     QuerySnapshot querySnapshot = await employeeColluction.get();
     return querySnapshot.docs
         .map(
-          (doc) =>
-              EmployeeData.fromFireStore(doc.data() as Map<String, dynamic>),
+          (doc) => EmployeeData.fromFireStore(
+            doc.data() as Map<String, dynamic>,
+            doc.id,
+          ),
         )
         .toList();
   }

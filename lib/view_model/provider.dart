@@ -20,18 +20,21 @@ class EmployeeProvider extends ChangeNotifier {
       await employeeServices.addDatatoFireStore(
         EmployeeData(name: name.text, position: position.text),
       );
-      log(proDatalist.length.toString());
 
       name.clear();
       position.clear();
+
+      await employeeProvider();
+      notifyListeners();
     } catch (e) {
-      log("erorr on provider add function :=$e");
+      log("Error in provider add function: $e");
     }
   }
 
   Future deleteData(String id) async {
     try {
       await employeeServices.deletData(id);
+      notifyListeners();
     } catch (e) {
       log('Erorr on provider delete function := $e');
     }
@@ -40,6 +43,7 @@ class EmployeeProvider extends ChangeNotifier {
   Future editData(String id, EmployeeData datas) async {
     try {
       await employeeServices.updatData(id, datas);
+      log('the data deleted  == $datas');
     } catch (e) {
       log("Erorr on provider  updating function :=$e ");
     }

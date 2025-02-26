@@ -58,7 +58,15 @@ class _HomescreenState extends State<Homescreen> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     IconButton(onPressed: () {}, icon: Icon(Icons.edit)),
-                    IconButton(onPressed: () {}, icon: Icon(Icons.delete)),
+                    IconButton(
+                      onPressed: () {
+                        Provider.of<EmployeeProvider>(
+                          context,
+                          listen: false,
+                        ).deleteData(data.id.toString());
+                      },
+                      icon: Icon(Icons.delete),
+                    ),
                   ],
                 ),
               );
